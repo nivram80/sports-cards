@@ -2,3 +2,6 @@
 /.idea
 /typings/
 *.log
+*.js.map
+app/*.js
+app/*/*.js
