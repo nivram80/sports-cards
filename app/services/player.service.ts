@@ -21,7 +21,7 @@ export class PlayerService {
 
     private extractData(res: Response) {
         let body = res.json();
-        return bodygit;
+        return body;
     }
 
     private handleError(error: Response | any) {

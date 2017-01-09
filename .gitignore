@@ -3,6 +3,5 @@
 /typings/
 *.log
 *.js.map
-app/*.js
-app/*/*.js
+*.js
 .DS_Store
