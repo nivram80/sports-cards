@@ -1,1 +1,3 @@
-# angular2-typescript-seed
+# Sports Cards
+
+Angular 2 with TypeScript
