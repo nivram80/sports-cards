@@ -1,0 +1,22 @@
+<form>
+    <div class="form-group">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" [ngModelOptions]="{ standalone: true }" [(ngModel)]="player.fname" required>
+    </div>
+
+    <div class="form-group">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" [ngModelOptions]="{ standalone: true }" [(ngModel)]="player.lname" required>
+    </div>
+
+    <div class="form-group">
+        <label>
+            Hall of Fame
+            <input type="radio" [ngModelOptions]="{ standalone: true }" [(ngModel)]="player.hall_of_fame" value="true"> True
+            <input type="radio" [ngModelOptions]="{ standalone: true }" [(ngModel)]="player.hall_of_fame" value="false"> False
+        </label>
+    </div>
+
+    <button type="submit" (click)="addPlayer()">Submit</button>
+
+</form>

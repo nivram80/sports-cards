@@ -4,6 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { PlayerService } from "../../services/player.service";
 import { PlayersComponent } from "./list/players.component";
 import { PlayerRoutingModule } from "./player.routes";
+import { PlayerAddEditComponent } from "./add-edit/player-add-edit.component";
 
 @NgModule({
     imports: [
@@ -12,7 +13,8 @@ import { PlayerRoutingModule } from "./player.routes";
         PlayerRoutingModule
     ],
     declarations: [
-        PlayersComponent
+        PlayersComponent,
+        PlayerAddEditComponent
     ],
     providers: [
         PlayerService

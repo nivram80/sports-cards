@@ -17,4 +17,10 @@ export class HttpService {
             .catch(this.apiService.handleError);
     }
 
+    post(url, data) {
+        return this.http.post(this.apiService.API_ROOT_URL + url, data, this.options)
+            .map(this.apiService.extractData)
+            .catch(this.apiService.handleError);
+    }
+
 }
