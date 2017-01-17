@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
     selector: 'my-app',
     template: `
         <h1>{{ appTitle }} Application</h1>
-        <players></players>
+        <router-outlet></router-outlet>
     `
 })
 
