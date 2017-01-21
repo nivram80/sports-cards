@@ -9,6 +9,8 @@ import { HttpService } from "./services/http.service";
 import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app.routes";
 import { PlayerModule } from "./components/player/player.module";
+import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
+import {PageNotFoundRoutingModule} from "./components/page-not-found/page-not-found.routes";
 
 @NgModule({
     imports:      [
@@ -17,10 +19,11 @@ import { PlayerModule } from "./components/player/player.module";
         JsonpModule,
         FormsModule,
         AppRoutingModule,
-        PlayerModule
+        PlayerModule,
+        PageNotFoundRoutingModule
     ],
     declarations: [
-        AppComponent,
+        AppComponent
     ],
     providers:    [
         PlayerService,
