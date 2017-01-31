@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { PlayerService } from '../../../services/player.service';
+import { Component } from "@angular/core";
+import { PlayerService } from "../../../services/player.service";
 import { Player } from "../player";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
     selector: 'player-add-edit',
@@ -12,12 +13,20 @@ export class PlayerAddEditComponent {
     errorMessage: string;
     response;
 
-    constructor(private playerService: PlayerService) { }
+    constructor(
+        private playerService: PlayerService,
+        private router: Router
+    ) { }
 
-    addPlayer() {
+    onSubmit() {
         this.playerService.addPlayer(this.player)
-            .subscribe(
-                response => this.response = response,
-                error =>  this.errorMessage = <any>error);
+        .subscribe(
+            response => this.response = response,
+            error =>  this.errorMessage = <any>error,
+            () => this.goToPlayers());
+    };
+
+    goToPlayers() {
+        this.router.navigate(['/players']);
     }
 }

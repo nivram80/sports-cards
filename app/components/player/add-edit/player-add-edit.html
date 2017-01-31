@@ -1,22 +1,23 @@
-<form>
+<form (ngSubmit)="onSubmit()" #playerForm="ngForm">
     <div class="form-group">
         <label for="fname">First Name</label>
-        <input type="text" id="fname" [ngModelOptions]="{ standalone: true }" [(ngModel)]="player.fname" required>
+        <input type="text" class="form-control" id="fname" name="fname" [(ngModel)]="player.fname" required #fname="ngModel">
+        <span [hidden]="fname.valid || fname.pristine">First Name is required</span>
     </div>
 
     <div class="form-group">
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" [ngModelOptions]="{ standalone: true }" [(ngModel)]="player.lname" required>
+        <input type="text" class="form-control" id="lname" name="lname" [(ngModel)]="player.lname" required #lname="ngModel">
+        <span [hidden]="lname.valid || lname.pristine">Last Name is required</span>
     </div>
 
     <div class="form-group">
         <label>
             Hall of Fame
-            <input type="radio" [ngModelOptions]="{ standalone: true }" [(ngModel)]="player.hall_of_fame" value="true"> True
-            <input type="radio" [ngModelOptions]="{ standalone: true }" [(ngModel)]="player.hall_of_fame" value="false"> False
+            <input type="radio" [(ngModel)]="player.hall_of_fame" name="hall_of_fname" value="true"> True
+            <input type="radio" [(ngModel)]="player.hall_of_fame" name="hall_of_fname" value="false"> False
         </label>
     </div>
 
-    <button type="submit" (click)="addPlayer()">Submit</button>
-
+    <button type="submit" [disabled]="!playerForm.form.valid">Submit</button>
 </form>
