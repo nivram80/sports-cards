@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { PlayerService } from "../../../services/player.service";
 import { Player } from "../player";
-import { ActivatedRoute, Router } from "@angular/router";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'player-add-edit',

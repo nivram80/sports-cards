@@ -14,8 +14,10 @@
     <div class="form-group">
         <label>
             Hall of Fame
-            <input type="radio" [(ngModel)]="player.hall_of_fame" name="hall_of_fname" value="true"> True
-            <input type="radio" [(ngModel)]="player.hall_of_fame" name="hall_of_fname" value="false"> False
+            <input type="radio" [(ngModel)]="player.hall_of_fame" id="hof-true" name="hall_of_fname" value="true" required>
+            <label for="hof-true"> True</label>
+            <input type="radio" [(ngModel)]="player.hall_of_fame" id="hof-false" name="hall_of_fname" value="false" required>
+            <label for="hof-false"> False</label>
         </label>
     </div>
 

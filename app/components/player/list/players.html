@@ -1,7 +1,8 @@
 <h2>Players</h2>
-
-<div *ngFor="let player of players">
-    <div>{{player.fname}} {{player.lname}}<span *ngIf="player.hall_of_fame"> - HoF</span></div>
+<div>
+    <a routerLink="/players/add">Add Player</a>
 </div>
-
-<a routerLink="/players/add">Add Player</a>
+<br>
+<div *ngFor="let player of players">
+    <div>{{player.lname}}, {{player.fname}}<span *ngIf="player.hall_of_fame"> - HoF</span></div>
+</div>
