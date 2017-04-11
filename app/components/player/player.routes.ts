@@ -6,7 +6,7 @@ import { PlayerAddEditComponent } from "./add-edit/player-add-edit.component";
 const playersRoutes: Routes = [
     { path: 'players',  component: PlayersComponent },
     { path: 'players/add',  component: PlayerAddEditComponent },
-    { path: 'players/edit',  component: PlayerAddEditComponent }
+    { path: 'players/edit/:id',  component: PlayerAddEditComponent }
 ];
 
 @NgModule({

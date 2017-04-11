@@ -16,4 +16,8 @@ export class PlayerService {
         return this.httpService.post('/players', player);
     }
 
+    getPlayer(id): Observable<Player> {
+        return this.httpService.get('/player/' + id);
+    }
+
 }

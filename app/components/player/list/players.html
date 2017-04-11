@@ -4,5 +4,5 @@
 </div>
 <br>
 <div *ngFor="let player of players">
-    <div>{{player.lname}}, {{player.fname}}<span *ngIf="player.hall_of_fame"> - HoF</span></div>
+    <div><a [routerLink]="['/players/edit', player.id]">{{player.lname}}, {{player.fname}}</a><span *ngIf="player.hall_of_fame"> - HoF</span></div>
 </div>
